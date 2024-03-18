@@ -4,6 +4,7 @@ import com.example.domain.BankTransfer;
 import com.example.domain.BankTransferRepository;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class SettleBankTransferUseCase {
@@ -13,6 +14,7 @@ public class SettleBankTransferUseCase {
         this.bankTransferRepository = bankTransferRepository;
     }
 
+    @Transactional
     public void execute(String bankTransferId) {
         BankTransfer bankTransfer = bankTransferRepository.findByIdOrThrow(bankTransferId);
         bankTransfer.settle();

@@ -26,16 +26,16 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.github.gavlyukovskiy</groupId>
-			<artifactId>datasource-proxy-spring-boot-starter</artifactId>
-			<version>1.9.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.gavlyukovskiy</groupId>
-			<artifactId>flexy-pool-spring-boot-starter</artifactId>
-			<version>1.9.1</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.github.gavlyukovskiy</groupId>-->
+<!--			<artifactId>datasource-proxy-spring-boot-starter</artifactId>-->
+<!--			<version>1.9.1</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.github.gavlyukovskiy</groupId>-->
+<!--			<artifactId>flexy-pool-spring-boot-starter</artifactId>-->
+<!--			<version>1.9.1</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.quickperf</groupId>
 			<artifactId>quick-perf-junit5</artifactId>

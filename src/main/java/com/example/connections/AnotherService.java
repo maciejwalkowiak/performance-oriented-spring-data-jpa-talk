@@ -1,7 +1,6 @@
 package com.example.connections;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -12,7 +11,7 @@ public class AnotherService {
         this.personRepository = personRepository;
     }
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional
     public void runsInNewTransaction() {
         System.out.println(personRepository.findAll());
         Sleep.sleep(400);

@@ -4,10 +4,14 @@ import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Version;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
+@DynamicUpdate
 public class BankTransfer {
     public enum State {
         CREATED,
@@ -18,10 +22,10 @@ public class BankTransfer {
 
     private String reference;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Account sender;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Account receiver;
 
     @Embedded
@@ -29,6 +33,9 @@ public class BankTransfer {
 
     @Enumerated(EnumType.STRING)
     private State state;
+
+    @Version
+    private Long version;
 
     public BankTransfer() {
     }
