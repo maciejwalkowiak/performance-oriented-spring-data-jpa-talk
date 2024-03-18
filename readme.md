@@ -7,6 +7,8 @@ This repository contains code for the talk I gave at [Voxxed Days Zurich](https:
 - [YouTube](https://www.youtube.com/watch?v=exqfB1WaqIw)
 - [Slides](https://speakerdeck.com/maciejwalkowiak/performance-oriented-spring-data-jpa-and-hibernate)
 
+`main` branch contains initial code, without changes. `complete` branch has all fixes made during the talk applied.
+
 Resources used or mentioned in the talk:
 
 - [Flexy Pool](https://github.com/vladmihalcea/flexy-pool)
